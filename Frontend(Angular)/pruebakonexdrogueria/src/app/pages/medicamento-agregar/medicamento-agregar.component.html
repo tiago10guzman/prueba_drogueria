@@ -1,0 +1,75 @@
+<form>
+  <p-card class="card-container">
+    <div class="card">
+      <div class="formgrid grid">
+        <div class="field col">
+
+          <p>nombre:</p>
+          <input 
+          type="nombre" 
+          name="nombre" 
+          pInputText 
+          [(ngModel)]="nombre" 
+          [disabled]="isDisabled" 
+          style="width: 25rem;"
+          />
+
+          <p>fecha Fabricacion:</p>
+          <p-calendar
+            name="fechaFabricacion"
+            [(ngModel)]="fechaFabricacion"
+            [showIcon]="true"
+            dateFormat="dd-mm-yy"
+            [appendTo]="'body'"
+            [ngStyle]="{ 'width': '25rem' }"
+          ></p-calendar>
+
+          <p>fecha Vencimiento:</p>
+          <p-calendar
+            name="fechaVencimiento"
+            [(ngModel)]="fechaVencimiento"
+            [showIcon]="true"
+            dateFormat="dd-mm-yy"
+            [appendTo]="'body'"
+          ></p-calendar>
+          
+        </div>
+
+        <div class="field col">
+
+          <p>laboratorio:</p>
+          <input
+            type="text"
+            name="laboratorio"
+            pInputText
+            [(ngModel)]="laboratorio"
+            [disabled]="isDisabled"
+            style="width: 25rem;"
+          />
+
+          <p>cantidad Stock:</p>
+          <p-inputNumber
+            name="cantidadStock"
+            inputId="integeronly"
+            [(ngModel)]="cantidadStock"
+            [ngStyle]="{ 'width': '25rem' }"
+          >
+          </p-inputNumber>
+
+          <p>valor Unitario:</p>
+          <p-inputNumber
+            name="valorUnitario"
+            inputId="integeronly"
+            [(ngModel)]="valorUnitario"
+            [ngStyle]="{ 'width': '25rem' }"
+          >
+          </p-inputNumber>
+          
+        </div>
+
+
+      </div>
+      <button pButton type="button" class="p-button-raised" label="{{text_button}}" (click)="submitForm()"></button>
+    </div>
+  </p-card>
+</form>

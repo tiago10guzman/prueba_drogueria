@@ -1,0 +1,37 @@
+.outofstock {
+    font-weight: 700;
+    color: #ff5252;
+    text-decoration: line-through;
+}
+
+.lowstock {
+    font-weight: 700;
+    color: #ffa726;
+}
+
+.instock {
+    font-weight: 700;
+    color: #66bb6a;
+}
+
+z-index {
+    z-index: -1; /* Valor de z-index deseado */
+}
+
+th {
+    min-width: 10rem;
+    text-transform: uppercase;
+  }
+
+.custom-button {
+    /* Estilos que desees aplicar */
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.center-td {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
